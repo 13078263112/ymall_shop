@@ -2,7 +2,7 @@
   "name": "xiaomi",
   "version": "1.0.0",
   "description": "xiaomishangcheng",
-  "author": "zhiyongzaixian <13852292775@163.com>",
+  "author": "yaoweicheng <77356399@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

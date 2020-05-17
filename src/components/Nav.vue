@@ -1,18 +1,17 @@
 <template>
   <nav id="nav">
     <div class="banner_x center">
-      <router-link to="/" class="logo"><h1>硅谷官网</h1></router-link>
       <a class="gif"></a>
       <ul class="list">
         <li><a href="javascript:;">秒杀</a></li>
         <li><a href="javascript:;">优惠券</a></li>
         <li><a href="javascript:;">闪购</a></li>
         <li><a href="javascript:;">拍卖</a></li>
-        <li><a href="javascript:;">硅谷服饰</a></li>
-        <li><a href="javascript:;">硅谷超市</a></li>
+        <li><a href="javascript:;">嘟嘟服饰</a></li>
+        <li><a href="javascript:;">嘟嘟超市</a></li>
         <li><a href="javascript:;">生鲜</a></li>
         <li><a href="javascript:;">全球购</a></li>
-        <li><a href="javascript:;">硅谷金融</a></li>
+        <li><a href="javascript:;">嘟嘟金融</a></li>
       </ul>
       <div class="fr">
         <div class="search">
@@ -47,7 +46,7 @@
     },
     methods:{
       ToSearch(){
-        this.$store.dispatch('getSearch',{keyword:this.keyword,pageSize:1,cb:()=>{
+        this.$store.dispatch('getSearch',{keyword:this.keyword,pageSize:5,cb:()=>{
           if(this.$router.history.current.fullPath=="/search"){
             location.reload();
           }else{
@@ -74,14 +73,6 @@
       & > a
         display: block
         height: 100%
-      .logo
-        width: 50px
-        text-indent: -10000px
-        // background: url("/static/image/nav/logo_top.png") no-repeat
-        background: url("/static/image/nav/logo2.png") no-repeat
-        background-size: 100%
-        background-position: center
-
       .gif
         width: 180px
         background: url("/static/image/nav/yyymix.gif") no-repeat

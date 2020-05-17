@@ -1,7 +1,7 @@
 <template>
   <div id="flash">
-    <h2>硅谷闪购</h2>
-    <ul v-if="flashShop.products">
+    <h2>嘟嘟闪购</h2>
+    <ul >
       <li class="time">
         <a href="javascript:;">
           <p class="name">14:00 场</p>
@@ -16,9 +16,9 @@
           </div>
         </a>
       </li>
-      <li v-for="good in flashShop.products.slice(0,4)" :key="good.id">
+      <li v-for="good in flashShop.slice(0,4)" :key="good.id">
         <router-link to="/detail/123">
-          <img :src="good.imgPath" alt=""/>
+          <img :src="good.pic" alt=""/>
           <p class="name">{{good.name}}</p>
           <p class="discount">5月9日-21日享花呗12期分期免息</p>
           <p class="price">{{good.msPrice}}元起</p>

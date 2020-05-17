@@ -52,32 +52,33 @@ export default {
   },
   async getHomeCates({commit}) {
     const result = await reqHomeCates()
-    if (!result.code) {
+    if (result.code==200) {
       commit(RECEIVE_HOME_CATES, result.data)
     }
   },
   async getHomeCateList({commit},{id,curIndex}) {
     const result = await reqHomeCateList(id)
-    if (!result.code) {
+    if (result.code==200) {
       commit(RECEIVE_HOME_CATELIST, {subs:result.data,curIndex})
     }
   },
   async getHomeAdv({commit},cb) {
     const result = await reqHomeAdv()
-    if (!result.code) {
+    if (result.code==200) {
+      console.log(1)
       commit(RECEIVE_HOME_ADV,result.data);
       typeof cb=="function"&&cb();
     }
   },
   async getHomeHotProducts({commit}) {
     const result = await reqHomeHotProducts()
-    if (!result.code) {
+    if (result.code==200) {
       commit(RECEIVE_HOME_HOTPRODUCTS,result.data);
     }
   },
   async getHomeFlashShop({commit}) {
     const result = await reqHomeFlashShop()
-    if (!result.code) {
+    if (result.code==200) {
       commit(RECEIVE_HOME_FLASHSHOP,result.data);
     }
   },
@@ -186,7 +187,7 @@ export default {
   },
 
 
-  
+
 
   // async search({commit}, searchWord) {
   //   const result = await reqSearch(searchWord)

@@ -92,7 +92,7 @@
             <ul class="nomore">
               <li v-for="prop in catelog.value" :key="catelog+prop" @click="setSelectInfo('selectCatelog',prop,catelog.name)">
                 <input type="checkbox">
-                <a href="javascript:;">{{prop}}</a>
+                    <a href="javascript:;">{{prop.name}}</a>
               </li>
             </ul>
             <div class="select">
@@ -145,7 +145,7 @@
           </div>
         </div>
         <!--热点-->
-        <!-- <div class="pre">
+        <div class="pre">
           <div class="sl_key">
             <span>热点：</span>
           </div>
@@ -289,7 +289,7 @@
               <span>+</span>
             </a>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -369,7 +369,7 @@
           }
           this.$store.dispatch('getSearch',obj);
         });
-        
+
       }
     },
     computed:{

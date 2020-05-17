@@ -24,9 +24,9 @@
 <script>
   import {mapState} from 'vuex';
   export default {
+     pageSize:5,
     props:{
       pageNum:Number,
-      pageSize:Number,
       total:Number,
       setPageNum:Function,
       selectBrand:Array,

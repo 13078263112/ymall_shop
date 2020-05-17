@@ -1,7 +1,7 @@
 <template>
   <div id="cate_menu" class="fl">
     <ul>
-      <li v-for="(item,index) in homeCates" :key="index" @mouseenter="curIndex=index" v-if="index<10">
+      <li v-for="(item,index) in homeCates" :key="index" @mouseenter="curIndex=item.id" v-if="index<10">
         <a href="">{{item.name}}</a>
       </li>
       <li v-if="homeCates.length">
@@ -12,7 +12,7 @@
               <i class="iconfont icon-jiantou_xiangyou"></i>
             </div>
             <ul class="list">
-              <li v-for="(small,index) in cate.subs" :key="small.id">
+              <li v-for="small in cate.children" :key="small.id">
                 <a href="javascript:;">
                   {{small.name}}
                 </a>
@@ -54,7 +54,7 @@
   #cate_menu
     width: 234px
     height: 100%
-    background-color: #0c0c13
+    background-color: #819ca2
     box-sizing: border-box
     position: relative
     & > ul

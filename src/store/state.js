@@ -1,7 +1,7 @@
 export default {
   hotSearch:[],
   homeCates:[],
-  homeAdv:[],
+  homeAdv:{},
   hotProducts:[],
   flashShop:[],
   productInfo: {},

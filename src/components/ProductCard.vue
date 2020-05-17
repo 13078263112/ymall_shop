@@ -8,7 +8,7 @@
     <div class="pinpai">
       <router-link :to="'/detail/'+product.id">{{product.brandName}}</router-link>
     </div>
-    <div class="youhui">{{product.name}}</div>
+    <div class="youhui" v-html="product.name"></div>
     <div class="jiage">{{product.price}}元</div>
   </div>
 </template>
@@ -17,6 +17,7 @@
     props:{
       product:Object
     }
+    
   }
 </script>
 <style lang="stylus" scoped>

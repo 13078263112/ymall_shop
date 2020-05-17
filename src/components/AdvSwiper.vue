@@ -2,9 +2,10 @@
   <div class="swiper-container fl">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(slide,index) in homeAdv" :key="index">
-        <img :src="slide.imgPath" alt="">
+        <img :src="slide.pic" alt="">
       </div>
     </div>
+    <div>{{homeAdv}}</div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
@@ -19,6 +20,7 @@
     computed:{
       ...mapState(['homeAdv'])
     },
+
     mounted() {
       this.$store.dispatch('getHomeAdv',()=>{
         this.$nextTick(()=>{
